@@ -16,12 +16,17 @@ p {
     font-size: 20px;
 }
 
+/* Content css */
+#content {
+    text-align: center;
+}
+
 /* Topnav css */
 body {
     margin: 0;
 }
 
-/* Topnav itself covers the whole width of the screen */
+/* nav.topnav covers the whole width of the screen */
 nav.topnav {
     list-style-type: none;
     background-color: #333;
@@ -29,11 +34,11 @@ nav.topnav {
 
 /* Topnav links are only within the middle third of the screen in wide view */
 ul.topnav {
+    width: 33%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    width: 33%;
     margin: 0 auto;
 }
 

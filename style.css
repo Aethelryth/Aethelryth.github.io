@@ -7,6 +7,10 @@ h1 {
     text-align: center;
 }
 
+section {
+    text-align: center;
+}
+
 p {
     font-family: verdana;
     font-size: 20px;
@@ -17,12 +21,20 @@ body {
     margin: 0;
 }
 
+/* Topnav itself covers the whole width of the screen */
+nav.topnav {
+    list-style-type: none;
+    background-color: #333;
+}
+
+/* Topnav links are only within the middle third of the screen in wide view */
 ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    width: 33%;
+    margin: 0 auto;
 }
 
 ul.topnav li {
@@ -54,5 +66,9 @@ ul.topnav li.right {
     ul.topnav li.right,
     ul.topnav li {
         float: none;
+    }
+
+    ul.topnav {
+        width: 100%;
     }
 }

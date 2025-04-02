@@ -9,20 +9,23 @@ var numGamePieces = 10;
 function startGame() {
     myGameArea.start();
     for (var i = 0; i < numGamePieces; i++) {
-        gamePieces.push(new component(30, 30, "blue", Math.floor(Math.random() * 450), Math.floor(Math.random() * 240)));
+        gamePieces.push(new component(30, 30, "blue", Math.floor(Math.random() * myGameArea.canvas.width-30), Math.floor(Math.random() * myGameArea.canvas.height-30)));
     }
 }
 
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function () {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = window.innerWidth * 0.80;
+        this.canvas.height = window.innerHeight * 0.80;
         this.context = this.canvas.getContext("2d");
-        document.getElementById("content").appendChild(this.canvas)
+        document.getElementById("content").appendChild(this.canvas);
+        this.canvas.style.marginBottom = "60px";
         this.interval = setInterval(updateGameArea, 20);
     },
     clear: function () {
+        this.canvas.width = window.innerWidth * 0.80;
+        this.canvas.height = window.innerHeight * 0.80;
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
@@ -49,5 +52,5 @@ function updateGameArea() {
 }
 
 function endGame() {
-    myGameArea.canvas.remove()
+    myGameArea.canvas.remove();
 }

@@ -6,11 +6,11 @@ function handleHashChange() {
         endGame();
     }
     if (hash === "#home") {
-        document.getElementById("content").innerHTML = "I hope to have something cool here to show someday!";
+        document.getElementById("content").innerHTML = "<p>I hope to have something cool here to show someday!</p>";
     } else if (hash === "#index") {
-        document.getElementById("content").innerHTML = "I want so many things they'll have to be organised...";
+        document.getElementById("content").innerHTML = "<p>I want so many things they'll have to be organised...</p>";
     } else if (hash === "#game") {
-        document.getElementById("content").innerHTML = "Reload the page, and the squares will be put at different random parts of the canvas!";
+        document.getElementById("content").innerHTML = "<p>Reload the page, and the squares will be put at different random parts of the canvas!</p>";
         startGame();
     } else {
         console.log("No specific hash or unknown hash", hash);    // Debug output for unknown hashes

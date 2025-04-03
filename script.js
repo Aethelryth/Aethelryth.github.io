@@ -10,7 +10,7 @@ function handleHashChange() {
     } else if (hash === "#index") {
         document.getElementById("content").innerHTML = "<p>I want so many things they'll have to be organised...</p>";
     } else if (hash === "#game") {
-        document.getElementById("content").innerHTML = "<p>Reload the page, and the squares will be put at different random parts of the canvas!</p>";
+        document.getElementById("content").innerHTML = "<p>Reload the page for a fun visual of my current progress on this brain trainer game!</p>";
         startGame();
     } else {
         console.log("No specific hash or unknown hash", hash);    // Debug output for unknown hashes

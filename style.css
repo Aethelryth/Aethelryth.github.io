@@ -2,87 +2,16 @@ body {
     background-color: rgb(145, 96, 152);
 }
 
-h1 {
-    color: white;
-    text-align: center;
-}
-
-section {
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-
-/* Content css */
-#content {
-    width: 100%;
-    text-align: center;
-}
-
-/* Topnav css */
-body {
-    margin: 0;
-}
-
-/* nav.topnav covers the whole width of the screen */
-nav.topnav {
-    list-style-type: none;
-    background-color: #333;
-}
-
-/* Topnav links are only within the middle third of the screen in wide view */
-ul.topnav {
-    width: 33%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-ul.topnav li {
+.Close {
     float: left;
+    color: #FFF;
+    font-size: 16px;
+    background-color: red;
+    padding: 4px 8px 4px;
+    border-radius: 4px;
 }
 
-ul.topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+#main-close {
+    margin: 8px 0px 4px 32px;
 }
 
-ul.topnav li a:hover:not(.active) {
-    background-color: #111;
-}
-
-ul.topnav li a.active {
-    background-color: #04AA6D;
-}
-
-ul.topnav li.right {
-    float: right;
-}
-
-@media screen and (max-width: 600px) {
-
-    ul.topnav li.right,
-    ul.topnav li {
-        float: none;
-    }
-
-    ul.topnav {
-        width: 100%;
-    }
-}
-
-/* Game */
-canvas {
-    border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
-    /* Used to centre the canvas */
-    display: inline;
-}

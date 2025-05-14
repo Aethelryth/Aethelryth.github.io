@@ -78,6 +78,37 @@ class DraggableDiv {
 
 
 // Apply to all draggable elements
-document.querySelectorAll('.draggable').forEach(el => new DraggableDiv(el));
+const draggableInstances = {};
+document.querySelectorAll('.draggable').forEach(el => {
+    draggableInstances[el.id] = new DraggableDiv(el);
+});
 
 
+
+let openBoxCount = 0;
+
+document.querySelectorAll('.icon-bar button').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('opens');
+        const box = document.getElementById(targetId);
+
+        if (box && box.style.display !== 'block') {
+            const offset = openBoxCount * 30;
+            box.style.top = `${100 + offset}px`;
+            box.style.left = `${100 + offset}px`;
+            draggableInstances[targetId]?.bringToFront();
+            box.style.display = 'block';
+            openBoxCount = (openBoxCount + 1) % 10;
+        }
+    });
+});
+
+
+document.querySelectorAll('.Close').forEach(button => {
+    button.addEventListener('click', function () {
+        const box = this.closest('.draggable');
+        if (box) {
+            box.style.display = 'none';
+        }
+    });
+});

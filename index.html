@@ -16,9 +16,31 @@
 </head>
 
 <body>
-    <button class="Close" id="main-close" type="button" onclick="closeAll">X</button>
+    <!-- Icons to open windows -->
+    <div class="icon-bar">
+        <div class="icon-button">
+            <button opens="box1">📦</button>
+            <span>Box 1</span>
+        </div>
+        <div class="icon-button">
+            <button opens="box2">🔧</button>
+            <span>Settings</span>
+        </div>
+    </div>
 
+    <!-- Draggable windows -->
+    <div class="draggable" id="box1">
+        <div class="draggable-header">Drag Me 1<button class="Close" type="button">X</button></div>
+        <p>Box 1</p>
+    </div>
+
+    <div class="draggable" id="box2" style="top: 200px; left: 200px;">
+        <div class="draggable-header">Drag Me 2<button class="Close" type="button">X</button></div>
+        <p>Box 2</p>
+    </div>
 </body>
-    <script src="script.js"></script>
+<!-- JS -->
+<script src="script.js"></script>
+<script src="draggableDivs.js"></script>
 
 </html>

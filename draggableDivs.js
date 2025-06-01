@@ -24,11 +24,17 @@ class DraggableDiv {
             this.bringToFront();
             this.dragMouseDown(e);
         };
+        this.elmnt.onmousedown = (e) => {
+            this.bringToFront();
+        };
 
         // Touch events
         this.header.ontouchstart = (e) => {
             this.bringToFront();
             this.dragTouchStart(e);
+        };
+        this.elmnt.ontouchstart = (e) => {
+            this.bringToFront();
         };
     }
 

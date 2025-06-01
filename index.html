@@ -17,26 +17,52 @@
 
 <body>
     <!-- Icons to open windows -->
-    <div class="icon-bar">
-        <div class="icon-button">
-            <button opens="box1">📦</button>
-            <span>Box 1</span>
-        </div>
-        <div class="icon-button">
+    <!-- <div class="icon-bar"> -->
+    <table class="icon-bar">
+        <td class="icon-button">
+            <button opens="box1">👋</button>
+            <span>About Me</span>
+        </td>
+        <td class="icon-button">
             <button opens="box2">🔧</button>
-            <span>Settings</span>
-        </div>
-    </div>
+            <span>About this site</span>
+        </td>
+        <td class="icon-button">
+            <button opens="box3">🎤</button>
+            <span>Beatboxing</span>
+        </td>
+    </table>
+    <!-- </div> -->
 
     <!-- Draggable windows -->
     <div class="draggable" id="box1">
-        <div class="draggable-header"><span class="header-text">Drag Me 1</span><button class="Close" type="button">X</button></div>
-        <p>Box 1</p>
+        <div class="draggable-header"><span class="header-text">About Me</span><button class="Close"
+                type="button">X</button></div>
+        <p>Hi!</p>
+        <p>I'm Nova, a recent Computer Science and Mathematics graduate from UWA with a strong foundation in systems
+            programming,
+            algorithm design, and data analysis. Experienced in developing complex software projects, collaborating in
+            agile teams,
+            and delivering real-world client solutions. Known for clear communication, leadership, and a pragmatic,
+            detail-driven
+            approach to solving technical challenges.</p>
     </div>
 
     <div class="draggable" id="box2" style="top: 200px; left: 200px;">
-        <div class="draggable-header"><span class="header-text">Drag Me 2</span><button class="Close" type="button">X</button></div>
-        <p>Box 2</p>
+        <div class="draggable-header"><span class="header-text">About this site</span><button class="Close"
+                type="button">X</button></div>
+        <p>This website is an on-going project for me that will change over time. Check in once in a while if you're
+            interested in seeing what I can do!</p>
+        <p>Of note: I can be dragged like a window, try it out!</p>
+    </div>
+
+    <div class="draggable" id="box3">
+        <div class="draggable-header"><span class="header-text">Beatbox</span><button class="Close"
+                type="button">X</button></div>
+        <p>I've been beatboxing since 2021, and enjoy it quite a lot. Here's where I've placed in competitions I've competed in:</p>
+        <p>2023 WA Beatbox Championships top 8</p>
+        <p>2024 WA Beatbox Championships top 4</p>
+        <p>2024 Online Australia Beatbox Championships top 4</p>
     </div>
 </body>
 <!-- JS -->

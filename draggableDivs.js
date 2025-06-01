@@ -1,4 +1,7 @@
 let currentZIndex = 1000; // Starting z-index
+var boxOffsetMultiplier = 50; // Every box opens this many pixels further down & rightwards
+var boxInitialOffsetX = 150; // Initial box offset
+var boxInitialOffsetY = 100; // Initial box offset
 
 class DraggableDiv {
     constructor(element) {
@@ -87,15 +90,16 @@ document.querySelectorAll('.draggable').forEach(el => {
 
 let openBoxCount = 0;
 
+
 document.querySelectorAll('.icon-bar button').forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.getAttribute('opens');
         const box = document.getElementById(targetId);
 
         if (box && box.style.display !== 'block') {
-            const offset = openBoxCount * 30;
-            box.style.top = `${100 + offset}px`;
-            box.style.left = `${100 + offset}px`;
+            const offset = openBoxCount * boxOffsetMultiplier;
+            box.style.top = `${boxInitialOffsetY + offset}px`;
+            box.style.left = `${boxInitialOffsetX + offset}px`;
             draggableInstances[targetId]?.bringToFront();
             box.style.display = 'block';
             openBoxCount = (openBoxCount + 1) % 10;
@@ -109,6 +113,7 @@ document.querySelectorAll('.Close').forEach(button => {
         const box = this.closest('.draggable');
         if (box) {
             box.style.display = 'none';
+            openBoxCount--;
         }
     });
 });

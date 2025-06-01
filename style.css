@@ -1,16 +1,16 @@
 body {
-    background-color: rgb(145, 96, 152);
+    /* Image sourced from Windows Wallpapers */
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 /* Icon bar */
 .icon-bar {
     position: fixed;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    z-index: 1000;
+    left: 40px;
+    top: 30px;
 }
 
 .icon-button {
@@ -18,6 +18,10 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 14px;
+}
+
+.icon-button:hover {
+    background: rgba(77, 140, 223, 0.6);
 }
 
 .icon-button span {
@@ -49,7 +53,8 @@ body {
     z-index: 9;
     background-color: #f1f1f1;
     border: 1px solid #d3d3d3;
-    width: 150px;
+    border-radius: 5px;
+    width: 500px;
     padding: 0px 0px 10px;
 }
 
@@ -65,5 +70,11 @@ body {
 .header-text {
     display: inline-block;
     margin-top: 6px;
+    margin-left: 2px;
     /* Pushes text downward slightly */
+}
+
+div.draggable p {
+    margin-left: 10px;
+    margin-right: 10px;
 }

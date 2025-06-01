@@ -3,6 +3,15 @@ var boxOffsetMultiplier = 50; // Every box opens this many pixels further down &
 var boxInitialOffsetX = 150; // Initial box offset
 var boxInitialOffsetY = 100; // Initial box offset
 
+// Ensure the window is large enough (only checks on startup)
+if (window.innerWidth < 800 || window.windowHeight < 500) {
+    // Modify draggable div window size to be thinner
+    boxInitialOffsetX = 10;
+    boxInitialOffsetY = 10;
+    boxOffsetMultiplier = 10;
+}
+
+
 class DraggableDiv {
     constructor(element) {
         this.elmnt = element;
@@ -66,8 +75,12 @@ class DraggableDiv {
         this.pos3 = clientX;
         this.pos4 = clientY;
 
-        this.elmnt.style.top = (this.elmnt.offsetTop - this.pos2) + "px";
-        this.elmnt.style.left = (this.elmnt.offsetLeft - this.pos1) + "px";
+        if (!(this.elmnt.offsetWidth + this.elmnt.offsetLeft - this.pos1 > window.innerWidth) && !(this.elmnt.offsetLeft - this.pos1 < 0)) {
+            this.elmnt.style.left = (this.elmnt.offsetLeft - this.pos1) + "px";
+        }
+        if (!(this.elmnt.offsetHeight + this.elmnt.offsetTop - this.pos2 > window.innerHeight) && !(this.elmnt.offsetTop - this.pos2 < 0)) {
+            this.elmnt.style.top = (this.elmnt.offsetTop - this.pos2) + "px";
+        }
     }
 
     // End drag

@@ -1,5 +1,1 @@
-// Ensure the window is large enough (only checks on startup)
-if (window.innerWidth < 800 || window.windowHeight < 500) {
-    alert("This website is intended for bigger screens.");
-}
-
+// This script file is no longer in use, but will be used for any code unrelated to the draggable divs portion of this project.

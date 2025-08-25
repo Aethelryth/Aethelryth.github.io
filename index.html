@@ -17,52 +17,25 @@
 
 <body>
     <!-- Icons to open windows -->
-    <!-- <div class="icon-bar"> -->
     <table class="icon-bar">
         <td class="icon-button">
-            <button opens="box1">👋</button>
-            <span>About Me</span>
-        </td>
-        <td class="icon-button">
-            <button opens="box2">🔧</button>
-            <span>About this site</span>
-        </td>
-        <td class="icon-button">
-            <button opens="box3">🎤</button>
-            <span>Beatboxing</span>
+            <button opens="settings">⚙️</button>
+            <span>Settings</span>
         </td>
     </table>
-    <!-- </div> -->
-
-    <!-- Draggable windows -->
-    <div class="draggable" id="box1">
-        <div class="draggable-header"><span class="header-text">About Me</span><button class="Close"
-                type="button">X</button></div>
-        <p>Hi!</p>
-        <p>I'm Nova, a recent Computer Science and Mathematics graduate from UWA with a strong foundation in systems
-            programming,
-            algorithm design, and data analysis. Experienced in developing complex software projects, collaborating in
-            agile teams,
-            and delivering real-world client solutions. Known for clear communication, leadership, and a pragmatic,
-            detail-driven
-            approach to solving technical challenges.</p>
-    </div>
-
-    <div class="draggable" id="box2" style="top: 200px; left: 200px;">
-        <div class="draggable-header"><span class="header-text">About this site</span><button class="Close"
-                type="button">X</button></div>
-        <p>This website is an on-going project for me that will change over time. Check in once in a while if you're
-            interested in seeing what I can do!</p>
-        <p>Of note: I can be dragged like a window, try it out!</p>
-    </div>
-
-    <div class="draggable" id="box3">
-        <div class="draggable-header"><span class="header-text">Beatbox</span><button class="Close"
-                type="button">X</button></div>
-        <p>I've been beatboxing since 2021, and enjoy it quite a lot. Here's where I've placed in competitions I've competed in:</p>
-        <p>2023 WA Beatbox Championships top 8</p>
-        <p>2024 WA Beatbox Championships top 4</p>
-        <p>2024 Online Australia Beatbox Championships top 4</p>
+    <div id="settings" class="draggable">
+        <div class="draggable-header">
+            <div class="header-text">
+                <span>Window Title</span>
+            </div>
+            <button class="Close">X</button>
+        </div>
+        <p>This is the text for the settings menu</p>
+        <p>TODO buttons for: change background, add folder, add link, export setup</p>
+        <div class="settings_option">
+            <label>Change Background Image:</label>
+            <input type="file" id="bg_image" accept="image/png, image/jpeg"/>
+        </div>
     </div>
 </body>
 <!-- JS -->

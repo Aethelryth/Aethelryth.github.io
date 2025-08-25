@@ -44,6 +44,7 @@
             <label>Name:</label>
             <input type="text" id="new_link_name">
             <button onclick='addNewLink(document.getElementById("new_link").value, document.getElementById("new_link_name").value)'>Add link</button>
+            <p id="newLinkErrorMessage"></p>
         </div>
         <div class="settings_option">
             <button onclick="localStorage.clear()">Clear all data (requires reload)</button>

@@ -94,3 +94,6 @@ div.settings_option {
 div.settings_option p {
     margin: 0px;
 }
+#newLinkErrorMessage {
+    color: red;
+}

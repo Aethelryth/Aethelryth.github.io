@@ -60,6 +60,11 @@ function addLink(new_link, new_link_name){
 function addNewLink(new_link, new_link_name) {
     if (new_link[0] == "_") return;
     if (new_link_name[0] == "_") return;
+    if (!isValidURL(new_link)) {
+        document.getElementById("newLinkErrorMessage").innerHTML="Provided link is not a resolvable URL";
+        return;
+    }
+    document.getElementById("newLinkErrorMessage").innerHTML="";
 
     addLink(new_link, new_link_name);
 
@@ -69,4 +74,13 @@ function addNewLink(new_link, new_link_name) {
     localStorage.setItem(`_Link${numLinks}_name`, new_link_name);
     numLinks++;
     localStorage.setItem("numLinks", numLinks.toString());
+}
+
+function isValidURL(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }

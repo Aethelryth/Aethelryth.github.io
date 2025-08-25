@@ -80,3 +80,16 @@ div.draggable p {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+/* Settings */
+div.settings_option {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-style: outset;
+    background-color: #e2e2e2;
+}
+
+div.settings_option p {
+    margin: 0px;
+}

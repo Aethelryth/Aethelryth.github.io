@@ -17,12 +17,13 @@
 
 <body>
     <!-- Icons to open windows -->
-    <table class="icon-bar">
+    <table class="icon-bar" id="icons">
         <td class="icon-button">
             <button opens="settings">⚙️</button>
             <span>Settings</span>
         </td>
     </table>
+    <!-- Settings Menu -->
     <div id="settings" class="draggable">
         <div class="draggable-header">
             <div class="header-text">
@@ -35,6 +36,17 @@
         <div class="settings_option">
             <label>Change Background Image:</label>
             <input type="file" id="bg_image" accept="image/png, image/jpeg"/>
+        </div>
+        <div class="settings_option">
+            <p>Adding Links:</p>
+            <label>Link:</label>
+            <input type="text" id="new_link">
+            <label>Name:</label>
+            <input type="text" id="new_link_name">
+            <button onclick='addNewLink(document.getElementById("new_link").value, document.getElementById("new_link_name").value)'>Add link</button>
+        </div>
+        <div class="settings_option">
+            <button onclick="localStorage.clear()">Clear all data (requires reload)</button>
         </div>
     </div>
 </body>

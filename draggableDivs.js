@@ -112,6 +112,7 @@ let openBoxCount = 0;
 
 document.querySelectorAll('.icon-bar button').forEach(button => {
     button.addEventListener('click', () => {
+        if (!button.hasAttribute("opens")) return;
         const targetId = button.getAttribute('opens');
         const box = document.getElementById(targetId);
 

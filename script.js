@@ -38,7 +38,7 @@ function addLink(new_link, new_link_name){
     // The clickable button
     let new_button = document.createElement("button");
     new_button.onclick = function () {
-        window.open(new_link, "_self");
+        window.location.replace(new_link);
     }
 
     let new_image = document.createElement("img");
